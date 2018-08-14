@@ -12,3 +12,7 @@ In android platform, integrate smb client and play media item in smb servers.
   (1) download JavaEE sdk, add javax.servlet-api.jar in this sdk into class path of the operation system.
   (2) modify the javac tool path in build.xml according to your operation system.
   (3) use ant to compile.
+7. why user jcifs 1.2.25 version, because this version support smb servers scan.
+8. In order to quickly read smb file in http server, we must do:
+   (1) follow the step 2, patched the LargeReadWrite.patch.
+   (2) System.setProperty("jcifs.smb.client.dfs.disabled", "true") in code. 
